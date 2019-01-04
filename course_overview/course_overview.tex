@@ -1,0 +1,535 @@
+\documentclass{tufte-handout}
+
+%\geometry{showframe}% for debugging purposes -- displays the margins
+\usepackage{amsmath}
+\setcitestyle{authoryear,open={(},close={)}}
+% Set up the images/graphics package
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+
+\title{The Universe Around Us\thanks{Course given at the ProCredit Academy during the 2019 period}}
+\author[Dr. N\'estor Espinoza]{Dr. N\'estor Espinoza}
+\date{January, 2019}  % if the \date{} command is left out, the current date will be used
+
+% The following package makes prettier tables.  We're all about the bling!
+\usepackage{booktabs}
+
+% The units package provides nice, non-stacked fractions and better spacing
+% for units.
+\usepackage{units}
+
+% The fancyvrb package lets us customize the formatting of verbatim
+% environments.  We use a slightly smaller font.
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+% Small sections of multiple columns
+\usepackage{multicol}
+
+% Provides paragraphs of dummy text
+\usepackage{lipsum}
+
+% These commands are used to pretty-print LaTeX commands
+\newcommand{\doccmd}[1]{\texttt{\textbackslash#1}}% command name -- adds backslash automatically
+\newcommand{\docopt}[1]{\ensuremath{\langle}\textrm{\textit{#1}}\ensuremath{\rangle}}% optional command argument
+\newcommand{\docarg}[1]{\textrm{\textit{#1}}}% (required) command argument
+\newenvironment{docspec}{\begin{quote}\noindent}{\end{quote}}% command specification environment
+\newcommand{\docenv}[1]{\textsf{#1}}% environment name
+\newcommand{\docpkg}[1]{\texttt{#1}}% package name
+\newcommand{\doccls}[1]{\texttt{#1}}% document class name
+\newcommand{\docclsopt}[1]{\texttt{#1}}% document class option name
+
+
+\titlespacing*{\section}{0pt}{0.3\baselineskip}{\baselineskip}
+\begin{document}
+
+\noindent\textcolor{Red}{\rule{16cm}{3mm}}
+
+{\let\newpage\relax\maketitle}
+%\maketitle% this prints the handout title, author, and date
+
+\begin{abstract}
+\noindent\textcolor{Red}{\rule{10cm}{0.4mm}}
+\noindent What does the universe around us looks like? From its scientific conception to its various interpretations, 
+this course will be devoted to the exploration of this question from the large-scale structure of the universe (cosmology), all 
+the way down to galaxy, star and (exo)planet formation and evolution. We will explore not only the scientific descriptions of these 
+astronomical areas of study, but consider the historical, phylosophical and religious foundations in which they were thought and 
+discovered, which will provide us with insights into the way in which science and human thinking works and evolves. In addition, key 
+unsolved questions will be discussed, which range from the beggining of our universe to the search of life in it.
+\noindent\textcolor{Red}{\rule{10cm}{0.4mm}}
+\end{abstract}
+
+\section{Course Structure}\label{sec:structure}
+\begin{fullwidth}
+The objective of the course is not only to offer a glipse into the different areas of research that have given rise to the picture 
+of the universe we have today, but to also focus on its social implications and interpretations, and how this shapes the understanding 
+of it by us, humans. To achieve this understanding, however, it is important to grasp how science \textit{works}, how 
+one \textit{arrives at hypothesis} that are \textit{tested} and which later shape our understanding of how the universe works and 
+behaves. Contrary to common intuition, science is not built out of ``eureka!" moments, but rather of incremental pieces of evidence 
+and insight from many different fields and approaches to a problem, which converge on a theory which is subsequently tested to exhaustion.
+
+The \textbf{general learning objective} of this course is for the \textit{students to be able to grasp key concepts in modern physics and 
+astronomy in order to understand the universe around them, taking into account the social and historical context in which those concepts 
+where developed}. This general learning objective is in turn divided into the following specific and actitudinal objectives:
+\begin{itemize}
+\item \textbf{Specific objectives}:
+\begin{itemize}
+\item \textit{Understand} the underlying physical principles that shape our current understanding of the universe. 
+\item \textit{Perform} simple order-of-magnitude estimations of physical quantities in order to understand basic properties of our universe.
+\item \textit{Understand} basic astronomical concepts in cosmology, stellar and planetary astrophysics. 
+\item \textit{Evaluate} real scientific data in light of a given scientific hypothesis.
+\item \textit{Evaluate} when an hypothesis is scientific.
+\end{itemize}
+\item \textbf{Actitudinal objectives}:
+\begin{itemize}
+\item \textit{Determine the importance} of scientific and technological advances for the further understanding of the universe around us.
+\item \textit{Determine the value of} collaboration and the power of incremental knowledge in science.
+\end{itemize}
+\end{itemize}
+
+The course will be structured in four different units, divided chronologically within the ProCredit Academy. In addition, each unit presents 
+a number of topics that will be presented by the students, which will have to research and prepare presentations before each class. In total, 
+there will be 15 short (20-10 minute) presentations students will have the opportunity to prepare. These units are:
+
+\subsection{Unit 1: Foundations of Physics and Astronomy}
+\textbf{The first unit, {\color{red}Foundations of Physics and Astronomy}}, will be focused on the understanding of our own pre-conceptions 
+on how science works, and the subsequent understanding of how science actually is made taking physics and astronomy (the sciences on which 
+we will focus this course) as an example. This will involve the discussion and understanding of modern experimental, theoretical and 
+philosophical results in these areas in order to understand space, time and the nature of atoms and light. The latter will probe to be of 
+uttermost importance for subsequent units as it is one of the main (and until recently the only) source of information for almost all we know about 
+the universe outside of Earth. These concepts will not only serve as examples on how science works in practice, but will also provide tools to 
+understand how light is studied through \textit{spectroscopy}, how instrumentation has evolved in time and history, and how this can help us obtain 
+precise information about distant astrophysical objects that form the universe around us.
+
+\subsection{Unit 2: Cosmology}
+\textbf{The second unit, {\color{red}Cosmology}}, will be focused on the development of modern cosmology, which gave rise to the present understanding 
+of our universe and the galaxies that are formed within it, including our own (the Milky Way). We will study how the area of cosmology evolved from 
+a purely theological and philosophical area to an active area of research in physics and astronomy thanks to advances and pioneering efforts in the 
+early 1900s, starting with the discovery of the expanding universe and its subsequent interpretation (and its associated controversies). This study 
+will lead us to the development of the idea of the ``Big-Bang", along with the results and observations that support it to date including the 
+relatively recent discovery of an \textit{accelerated} expanding universe. We will explore the philosopical and theological 
+interpretations/implications of these results. 
+
+\subsection{Unit 3: Star formation and evolution}
+\textbf{The third unit, {\color{red}Star formation and evolution}}, will focus on the study of how stars form, and how they 
+evolve in time. This will lead us to understand our own star, the Sun, as just one of hundred of billions of stars in our galaxy (which, as we will 
+see in Unit 2, is just one out of hundred of billions galaxies in the universe!). The study of the life of stars will provide us with a deep understanding 
+on how the elements came to be what they are observed today, allowing us to comprehend the concept popularized by Carl Sagan that \textit{we are all made of 
+starstuff}. 
+
+\subsection{Unit 4: (Exo)planets and life in the universe}
+\textbf{In the fourth and last unit of the course, {\color{red}(Exo)planets and life in the universe}}, we will explore the advances on our knowledge 
+of planets both in our Solar System and orbiting stars other than our own (called \textit{exoplanets}). Both the diversity and similarity of other 
+planets will be studied, focusing our attention not only on the methods and techniques used to discover and characterize them, but also on current 
+and future advances that are exploring the possibilities of life elsewhere. 
+
+\end{fullwidth}
+\pagebreak
+\noindent\textcolor{Red}{\rule{16cm}{3mm}}
+\section{Day one --- Unit 1: Foundations of Physics and Astronomy}
+\begin{fullwidth}
+%\noindent\textcolor{Red}{\rule{16cm}{1mm}}
+\subsection{Timeline (\textbf{*} marks student presentations)}
+\begin{enumerate}
+{\setlength\itemindent{25pt} \item[09:00 -- 10:00] Introduction to science \& the course.}
+{\setlength\itemindent{25pt} \item[10:00 -- 11:00] Modern physics, pt. I: Newton's revolution.}
+{\setlength\itemindent{25pt} \item[11:00 -- 11:30] (Coffee Break)}
+{\setlength\itemindent{25pt} \item[11:30 -- 13:00] Modern physics, pt. II: the nature of light.}
+{\setlength\itemindent{25pt} \item[13:00 -- 14:00] (Lunch)}
+{\setlength\itemindent{25pt} \item[14:00 -- 15:00] \textbf{*}Modern physics, pt. III: thermodynamics \& the atomic world.}
+{\setlength\itemindent{25pt} \item[15:00 -- 15:30] (Coffee Break)}
+{\setlength\itemindent{25pt} \item[15:30 -- 17:00] \textbf{*}Modern physics, pt. IV: special relativity \& quantum mechanics.}
+\end{enumerate}
+
+\subsection{Introduction to science \& the course}
+During the introduction to the course, both the teacher and the students will introduce themselves. In particular, students will be asked 
+what their expectations of the course are and what they hope to learn. The general learning objective of the course will be presented and 
+discussed with the students; we will brainstorm around the topic of what \textit{science} means to them with the following questions:
+\begin{itemize}
+\item What \textit{is} science?
+\item What defines when \textit{knowledge} is scientific?
+\item \textit{Who} does science?
+\item \textit{Why} is science important to understand the universe around us?
+\end{itemize}
+
+\subsection{Modern physics, pt. I: Newton's revolution}
+In this first part of the introduction to modern physics, we will explore the foundations of what we call ``modern physics" with the proposition 
+and subsequent rise of Newton's laws of motion, which arose from several previous thinkers and philosophers such as Aristotle, Galileo Galilei 
+and Ren\'e Descartes. We will explore what they mean, what the concept of \textit{energy} means in this framework along with the social and 
+historical development they had in time, along with the limitations and hypotheses behind. In particular, we will touch on Newton's famous 
+law of gravitation, how it came to be (along with Newton's famous \textit{Philosophae Naturalis Principia Mathematica}) thanks to the persuasion 
+of Edmund Halley in 1687, and how it beautifully explained previous results by famous astronomers such as Nicolaus Copernicus and Johannes Kepler. 
+The first activity of the course will be to use these laws to estimate the mass of the Sun, using only the known distance from the Earth to the Sun 
+($\approx$150,000,000 km) and the translation period of the Earth around the Sun ($\approx$365 days).\\
+\vspace{0.5 cm}
+\noindent \textbf{Key questions and concepts}:
+\begin{enumerate}
+\item What are Newton's laws?
+\item How did Newton's laws changed our perspective of the universe? How did it advance science?
+\item How did Newton come up with these laws? 
+\item Where does the applicability of classical mechanics ends? What are its flaws?
+\end{enumerate}
+
+\subsection{Modern physics, pt. II: the nature of light}
+In this second part, we will focus our attention to the nature of light: what it is and what properties it presents. This will be of fundamental 
+importance to our understanding of the universe around us, as almost every piece of information we receive on Earth from the universe comes in 
+the form of light. We will introduce \textit{spectroscopy}, the study of the emmited light of objects and use real spectra from stars in order to 
+apply our knowledge on the nature of light (and its interaction with matter) to real stars. With this, we will not only directly see how atoms and 
+molecules imprint their signatures in the spectra of stars, but also how we can estimate temperatures of stars simply looking at the stellar spectra 
+of stars. This will form the basis for the discussions to be held in future units. 
+
+\vspace{0.5 cm}
+\noindent \textbf{Key questions and concepts}:
+\begin{enumerate}
+\item What is light?
+\item Why is light important for our understanding of the universe around us?
+\item How does light interact with matter?
+%\item What motivated and what is special relativity? How does it differentiates from \textit{general} relativity? Why are they important to understand the universe around us?
+%\item What is and motivated the development of quantum mechanics?
+%\item How does light interact with matter?
+%\item Why is light important for our understanding of the universe around us?
+\end{enumerate}
+
+\subsection{Modern physics, pt. III: thermodynamics \& the atomic world (student presentations)}
+In this third part, students will have to present about two topics: (1) Thermodynamics and (2) the atomic world.
+
+\textit{For thermodynamics}, the student(s) will have to present the motivation behind this field of physics; why it is important, and how 
+its study was motivated for practical uses, as is a field that brought much interest of engenieers around the world. In particular, 
+the students should present and discusss the concepts of \textit{heat}, \textit{energy} and \textit{entropy}, which will be of much 
+use during our course.
+
+\textit{For the atomic world}, students should present how our current understanding of what an atom \textit{is} came to be: what models 
+where defined before we knew what the atom was composed of? What motivated this search? In addition, students should investigate and 
+present what is \textit{inside} the atoms, what kind of \textit{particles} are confined in it and what \textit{ forces} keep the atoms 
+together. Finally, the students should present how our current understanding of atoms allow us to understand how molcules are formed. 
+
+\subsection{Modern physics, pt. IV: special relativity \& quantum mechanics (student presentations)}
+In this fourth part, students will have to present about two topics: (1) special relativity and (2) quantum mechanics. For both topics, 
+students will have to discuss (i) the motivation for these theories, (ii) what these theories are about and (iii) how they change/challenge 
+our classical perspective of the different ideas they cover. 
+
+Students will have to not only present the topics but also \textit{generate discussions} about key concepts each theory presents. For example, 
+for special relativity, a key concept is our definition of what time and distance actually \textit{is}. For quantum mechanics, a key 
+concept is that of the definition of what the actual position/velocity of a particle actually \textit{means}.
+
+We will end this section with a discussion on how physics is subject to evidence and experimental results \textit{on top} of theories, and 
+how new theories can and are developed to explain these results.
+
+\end{fullwidth}
+\pagebreak
+
+\noindent\textcolor{Red}{\rule{16cm}{3mm}}
+\section{Day two --- Unit 2: Cosmology}
+\begin{fullwidth}
+%\noindent\textcolor{Red}{\rule{16cm}{1mm}}
+\subsection{Timeline (\textbf{*} marks student presentations)}
+\begin{enumerate}
+{\setlength\itemindent{25pt} \item[09:00 -- 09:30] Recap.}
+{\setlength\itemindent{25pt} \item[09:30 -- 11:00] The great debate \& the distance ladder.}
+{\setlength\itemindent{25pt} \item[11:00 -- 11:30] (Coffee Break)}
+{\setlength\itemindent{25pt} \item[11:30 -- 13:00] The expansion of the universe.}
+{\setlength\itemindent{25pt} \item[13:00 -- 14:00] (Lunch)}
+{\setlength\itemindent{25pt} \item[14:00 -- 15:30] \textbf{*}Theology, Philosophy \& Cosmology: Preparation.}
+{\setlength\itemindent{25pt} \item[15:30 -- 16:00] (Coffee Break)}
+{\setlength\itemindent{25pt} \item[16:00 -- 17:00] \textbf{*}Theology, Philosophy \& Cosmology: Debate.}
+\end{enumerate}
+\subsection{The great debate \& the distance ladder} 
+In this first part of this second unit, we will debate around the concepts debated in the National Academy of Sciences meeting in 
+1920 known as ``The Great Debate" \citep[for a historical review, see][]{TGD}, devoted to the concept of ``island universes": whether 
+with state-of-the-art knowledge at that time, we could understand/known whether \textit{nebulae} (today known to us as \textit{galaxies}) 
+where astrophysical objects like our own Mily Way, or if they were indeed \textit{inside} our Milky Way making our galaxy, effectively, the 
+universe. The discussion will focus on the student's own reasoning on how they think this could be resolved.
+
+The presentation of The Great Debate will lead us to the question of how to estimate distances in astronomy. Here we will introduce the two 
+most popular methods for distance calculations at the time: parallaxes and the period-luminosity relation of Henrietta Leavitt 
+\citep{leavitt:1912}. We will discuss and study through an activity how periods and luminosities of stars are determined in astronomy, 
+and show how the work of Leavitt led to resolve The Great Debate thanks to observations made by Edwin Hubble \citep{hubble:PL}.\\
+\vspace{0.5 cm}
+\noindent \textbf{Key questions and concepts}:
+\begin{enumerate}
+\item The Shapley-Curtis ``great debate".
+\item How do we know galaxies are outside our own?
+\item How do we estimate distances from Earth to other objects in the universe?  
+\item Historical development of the ``distance ladder".
+\end{enumerate}
+
+\subsection{The expansion of the universe}
+In this second part, we will explore the development of what is known today as Hubble-Lemaitre's law, which was interpreted as a signature 
+of the expansion of the universe back in the 1920s (after The Great Debate was resolved). Through an activity, we will determine how this was 
+\textit{measured} through the apparent recesion of galaxies from Earth. Using the Hubble-Lemaitre law, we will \textit{derive} important 
+quantities such as \textit{the age of the universe} implied by this relation (known as the ``Hubble time") and the size of the observable 
+universe. We will put these numbers in contrast with other known time-scales and length-scales to put it in context. This will lead us to 
+briefly discuss the ``Big-Bang" theory, the critiques to the theory and the evidence we have for it today, including the Cosmic Microwave 
+Background (CMB) which led to the nobel prize in 1978 and in 2006.
+
+After our introduction of the Hubble-Lemaitre law and all the historical development it involved, we will jump to a modern result that 
+resulted on the 2011 Nobel Prize of Physics: the \textit{accelerated} expansion of the universe \citep{AEU}. We will review the observations 
+that led to this result and the implied new physics this involves in the form of \textit{dark energy}.\\
+\vspace{0.5 cm}
+\noindent\textbf{Key questions and concepts}:
+\begin{enumerate}
+\item How do we know the universe expands? The \textit{Hubble-Lemaitre law}.
+\item Intepretation of an expanding universe. The ``\textit{Big-Bang}" theory; critiques.
+\item Historical, social and philosophical implications of an expanding universe.
+\item The \textit{Cosmic Microwave Radiation} (CMB) as evidence of the ``\textit{Big-Bang}" theory.
+\item The accelerated expansion of the universe; \textit{dark energy}.
+\end{enumerate}
+
+\subsection{\textbf{Theology, Philosophy \& Cosmology}}
+In this section of the course, we will follow \citet{theo:2017} and \citet{theo:2005} in order to study the different physical and 
+phylosophical views cosmology could impose in theology. We will divide the class in two groups, which will be forced to take a stance 
+on two fundamental questions: (i) do we need a (or various) god(s) to explain the \textit{existence} of our universe? (ii) is a theological 
+stance most likely to ultimately provide a comprehensive description of the universe?
+
+In the first part, the papers of \citet{theo:2017} and \citet{theo:2005} will be given to both groups in order to study them in detail with the 
+help of the teacher. In the second part, the debate will take place by splitting the hour in two half-hours, one for each question. For each question, 
+each group will have 5 minutes to expose their arguments defending their stance. Then, members of each team will make one question to the opposing team, 
+which the opposing team will have to answer in no more than 3 minutes. The debate will end with a conclusion/reflection by the moderator (the teacher).
+
+\end{fullwidth}
+\pagebreak
+
+\noindent\textcolor{Red}{\rule{16cm}{3mm}}
+\begin{fullwidth}
+\section{Day three --- Unit 2: Cosmology}
+%\noindent\textcolor{Red}{\rule{16cm}{1mm}}
+\subsection{Timeline (\textbf{*} marks student presentations)}
+\begin{enumerate}
+{\setlength\itemindent{25pt} \item[09:00 -- 09:30] Recap.}
+{\setlength\itemindent{25pt} \item[09:30 -- 11:00] The evolution and large-scale structure of the universe.}
+{\setlength\itemindent{25pt} \item[11:00 -- 11:30] (Coffee Break)}
+{\setlength\itemindent{25pt} \item[11:30 -- 13:00] Galaxies and the Milky Way}
+{\setlength\itemindent{25pt} \item[13:00 -- 14:00] (Lunch)}
+{\setlength\itemindent{25pt} \item[14:00 -- 15:30] \textbf{*}The fate of our universe.}
+{\setlength\itemindent{25pt} \item[15:30 -- 16:00] (Coffee Break)}
+{\setlength\itemindent{25pt} \item[16:00 -- 17:00] \textbf{*}Current cosmological problems.}
+\end{enumerate}
+
+\subsection{The evolution and large-scale structure of the universe}
+In this section, we will study the large-scale structure of the universe in order to understand and put into context all the knowledge 
+we have gained so far in this unit. We will start discussing the Hubble Deep Field image and with that we will estimate the number of 
+galaxies in the universe. With this, we will ask the question of how the current observable universe came to be, and will thus study 
+the evolution of the universe from the Planck Scale to the present era. This re-capitulation of the history of the universe will lead us 
+to explore in detail the tiny variations in the CMB (which led to the 2006 Nobel Prize), which in turn led to the proposition/evidence of/for 
+the \textit{cosmic inflation}.
+
+\vspace{0.5 cm}
+\noindent \textbf{Key questions and concepts}:
+\begin{enumerate}
+\item The evolution of our universe; from the ``Big-Bang" to the present day.
+\item Big-Bang nucleosynthesis.
+\item Limits to our understanding of the evolution of the universe (e.g., Planck Epoch, Cosmic Inflation).
+\item Matter distribution in the universe --- baryonic matter, dark matter. Evidence of dark matter.
+\end{enumerate}
+
+\subsection{Galaxies and the Milky Way}
+Our discussion on the large-scale structure of the universe will eventually lead us to understand galaxies, putting our own, the Milky Way, 
+into context. For this, we will study the well known ``Hubble Fork" through an activity in which we will clasify galaxies according to student-defined 
+classification schemes. After this, we will introduce the current physics that define our knowledge of how galaxies form, how they evolve and 
+how they agglomerate in the universe, including evidence for \textit{dark matter} in galaxies. From here, we will study our own galaxy, the Milky Way, 
+and its overall structure. Using data from our galaxy, we will \textit{derive} the mass contained within our Milky Way, and thus estimate the number 
+of stars in our galaxy. 
+
+\vspace{0.5 cm}
+\noindent \textbf{Key questions and concepts}:
+\begin{enumerate}
+\item Definition of a galaxy. Galaxy evolution and assembly. 
+\item The Hubble tuning fork; dimensions of galaxies. Matter distribution in galaxies. Rotation curves.
+\item The Milky Way as a galaxy. Distribution of stars in the Milky Way. 
+\end{enumerate}
+
+\subsection{The fate of our universe (student presentations)}
+In this section, students will organize themselves in order to present on three possible fates of the universe: the Big Crunch, the Big Rip and 
+the indefinite expansion of the universe. Students will have to research those terms, identify how people came up with those hypotheses and 
+explain what would happen to the universe in each of those scenarios, and whether current data supports any of those possible fates of the 
+universe.
+
+\subsection{Current cosmological problems (student presentations)}
+Students will have to present about one of the following topics:
+\begin{enumerate}
+\item \textbf{What is dark matter?} Current cosmological models assume dark matter is an unknown form of matter that does not interact with light. The student(s) will have to research and present current efforts to understand what dark matter actually \textit{is}, both through observations of the universe and experiments on Earth.
+\item \textbf{The $H_0$ problem}. One of the interesting current controversies in sciences is the so-called ``$H_0$ problem": the fact that different experiments are measuring different values of the (local) Hubble-Lemaitre constant ($H_0$). The student(s) will have to do research on this problem and explain it to the class, focusing on what the problem is, how it came to be and what are some of the possible solutions to the problem.
+\item \textbf{Multiverses and the size of the \textit{universe}}. During this unit we have discussed the size of the universe in terms of the \textit{observable} universe. However, this says nothing about the \textit{true} size of the universe: is it finite? Is it infinite? Could there be \textit{other} universes? The student(s) will have to research and present these questions to the class, along with current experiments  and/or ideas (if any) to measure/answer those properties/questions.
+\end{enumerate}
+
+
+\end{fullwidth}
+\pagebreak
+
+\noindent\textcolor{Red}{\rule{16cm}{3mm}}
+
+\begin{fullwidth}
+\section{Day four --- Unit 3: Star formation and evolution}
+%\noindent\textcolor{Red}{\rule{16cm}{1mm}}
+\subsection{Timeline (\textbf{*} marks student presentations)}
+\begin{enumerate}
+{\setlength\itemindent{25pt} \item[09:00 -- 09:30] Recap.}
+{\setlength\itemindent{25pt} \item[09:30 -- 11:00] The Sun as a Star, pt I.}
+{\setlength\itemindent{25pt} \item[11:00 -- 11:30] (Coffee Break)}
+{\setlength\itemindent{25pt} \item[11:30 -- 13:00] The Sun as a Star, pt II.}
+{\setlength\itemindent{25pt} \item[13:00 -- 14:00] (Lunch)}
+{\setlength\itemindent{25pt} \item[14:00 -- 15:30] Stellar graveyards: white dwarfs, neutron stars and black holes.}
+{\setlength\itemindent{25pt} \item[15:30 -- 16:00] (Coffee Break)}
+{\setlength\itemindent{25pt} \item[16:00 -- 17:00] *Gravitational Waves.}
+\end{enumerate}
+\subsection{The Sun as a Star}
+In this first part of our third unit, we will study stars as astrophysical objects in detail. First, we will study our own star, the Sun, as a star, defining 
+what a star actually \textit{is}, how our Sun is able to maintain its almost constant brightness at present, how it was formed and what is its future. This 
+will be done via discussions with the students in the form of a brainstorming activity on the different mentioned key points. We will 
+take the evolution of our Sun as a motivation to study the formation and evolution of \textit{other} stars, along with their distribution 
+in our galaxy. During this discussion we will study how stars (and their end-states) have polluted the universe of heavy elements including the elements present 
+in our bodies. 
+
+We will perform an activity in which we will divide in groups in order to perform spectral classification of stars, aiming to find patterns to sort stars 
+solely based on their spectra. Groups will present their own classification schemes, which will then be discussed by the class in order to merge them into one; 
+we will compare this classification scheme with known schemes.
+
+At the end of this first part (and if time allows), we will observe the ``Death stars" documentary (\url{https://www.youtube.com/watch?v=RrY8UTQLsfk}).
+
+\vspace{0.5 cm}
+\noindent \textbf{Key questions and concepts}:
+\begin{enumerate}
+\item What is a star? (Formation, structure, energy source(s), dimensions and lifetime of a star like the Sun).
+\item The Sun compared to other stars. The Hertzsprung-Russell diagram. Types of stars. 
+\item Distribution of stars in our galaxy.
+\item Stellar evolution and end-states of stars.
+\end{enumerate}
+
+\subsection{Stellar graveyards: white dwarfs, neutron stars and black holes}
+In this second part of our third unit, we will focus on the end-states of stars: white-dwarfs, neutron stars and black holes. We will explore how these 
+astrophysical objects are actually very special from the point of view of physics as they define new states of matter, how they are discovered and why 
+they are important for our understanding of the universe around us. For black holes, we will give a detailed view of the black hole at the center of our 
+galaxy through the documentary ``Black Holes" (\url{https://www.youtube.com/watch?v=j5tc2p7jdkc}).
+
+\vspace{0.5 cm}
+\noindent \textbf{Key questions and concepts}:
+\begin{enumerate}
+\item What is a white dwarf? What is a neutron star? What is a black hole?
+\item Detection of stellar remnants with current technology. The importance of (general) relativity for stellar remnants.
+\end{enumerate}
+
+\subsection{Gravitational Waves (student presentations)}
+In this third and final part of this unit, students will present about on of the most important topics in 2018, and which will surely keep providing 
+interesting science in 2019: gravitational waves.
+
+To cover this topic, student(s) presentations will be divided in two: (1) theory and (2) observations. The \textbf{theory} presentation will have to 
+present what \textit{are} gravitational waves, where they are generated and why is such a big deal we are detecting this kind of information from the 
+universe around us. The \textbf{observations} presentation will focus on the different experiments that are trying to detect them and how they work; 
+students should choose one of the results from these experiments and show it to the class.
+
+\end{fullwidth}
+\pagebreak
+
+\noindent\textcolor{Red}{\rule{16cm}{3mm}}
+\section{Day five --- Unit 4: (Exo)planets and life in the universe}
+
+\begin{fullwidth}
+%\noindent\textcolor{Red}{\rule{16cm}{1mm}}
+\subsection{Timeline (\textbf{*} marks student presentations)}
+\begin{enumerate}
+{\setlength\itemindent{25pt} \item[09:00 -- 09:30] Recap.}
+{\setlength\itemindent{25pt} \item[09:30 -- 11:00] The Earth as a(n) (exo)planet.}
+{\setlength\itemindent{25pt} \item[11:00 -- 11:30] (Coffee Break)}
+{\setlength\itemindent{25pt} \item[11:30 -- 13:00] *Human and robotic exploration of the Solar System.}
+{\setlength\itemindent{25pt} \item[13:00 -- 14:00] (Lunch)}
+{\setlength\itemindent{25pt} \item[14:00 -- 15:00] Human and robotic exploration of the universe.}
+{\setlength\itemindent{25pt} \item[15:00 -- 15:30] (Coffee Break)}
+{\setlength\itemindent{25pt} \item[15:30 -- 17:00] Search for life in the universe.}
+\end{enumerate}
+\subsection{The Earth as a(n) (exo)planet}
+In this first part of our last unit, we will discuss how we came to understand there are more planets than our own both in our Solar System and around 
+other stars. We will navegate through the latest advancements on this latter search --- the search for ``extrasolar planets", or ``exoplanets", for short --- 
+and its ability to offer us a unique view in our understanding on how common or rare our Solar System is. We will also explore the most interesting 
+exoplanets known to date for the exploration of life elsewhere, and study current efforts to find it.
+
+\vspace{0.5 cm}
+\noindent \textbf{Key questions and concepts}:
+\begin{enumerate}
+\item Planet detection methods in our Solar System (e.g., Vulcan, Neptune, Planet 9).
+\item Planet detection methods in stars other than the Sun.
+\item Is the Solar System unique in the universe? How do planetary systems form?
+\item The ``habitable zone"; How common is Earth? How do we know?
+\end{enumerate}
+
+\subsection{Human and robotic exploration of the Solar System (student presentations)}
+In this second part of our last unit, we will focus on past and on-going human and robotic exploration of our Solar System. 
+Students will have to give short (10 minutes) presentations on the following topics, highlighting the most interesting results 
+from these explorations:
+
+\begin{enumerate}
+\item Human and robotic exploration of the moon.
+\item Robotic and future human exploration of Mars.
+\item The (robotic) Cassini mission to Saturn (and its moons). 
+\item The (robotic) Galileo and Juno missions to Jupiter (and its moons).
+\end{enumerate}
+
+
+\subsection{Human and robotic exploration of the universe}
+In this third part of our last unit, we will brainstorm around the topic of the possibility of human and robotic exploration of the universe. 
+For this, we will discuss the problems of possible tripulated missions to nearby stars taking into account the finite life of humans, and the 
+large distances involved in inter-stellar travel following \citet{trip}, along with the possibility of travelling with/sending robotic probes; 
+for this latter problem, we will discuss the communication intricacies involved, and how current projects (e.g., the Breakthrough Initiative) 
+are trying to resolve them. This will in turn lead us to the discussion of how, if possible, to explore beyond nearby stars --- could we ever 
+explore in some way even the most close-by galaxies?
+
+\vspace{0.5 cm}
+\noindent \textbf{Key questions and concepts}:
+\begin{enumerate}
+\item Is it possible to travel to other stars? What are the main problems involved in this?
+\item How is communication a problem even when sending robotic probes to other stars?
+\item Would it be possible for us to explore the galaxy or even other galaxies in the universe?
+\end{enumerate}
+
+\subsection{Search for life in the universe}
+In this fourth part of our last unit, and final section of the course, we will first brainstorm on the concept of \textit{finding life} and, 
+also, \textit{what to do when we find it}. This will eventually lead to the discussion of the Search for Extra-Terrestial Intelligence (SETI) and 
+the search for technosignatures, in which we will follow \citet{techno} in order to provide ideas on what is currently being done and what is planned 
+for future searches in this front. In order to elucidate on the practical difficulty of searching for technosignatures, we will put the case of so-called 
+``Tabby's star" via her TED talk (\url{https://www.youtube.com/watch?v=gypAjPp6eps}). 
+
+\vspace{0.5 cm}
+\noindent \textbf{Key questions and concepts}:
+\begin{enumerate}
+\item What is life?
+\item How do we find life elsewhere? The Drake Equation.
+\item The Search for Extra-Terrestial Intelligence (SETI).
+\item Search for Technosignatures.
+\end{enumerate}
+\end{fullwidth}
+
+%\begin{enumerate}
+%\item Introduction (day 1).
+%\item Cosmology, pt. I (day 2).
+%\item Cosmology, pt. II (day 3).
+%\item Stellar formation and evolution (day 4).
+%\item Exoplanets (day 5).
+%\end{enumerate}
+%We describe each of these units below.
+%\end{fullwidth}
+%\subsection{Headings}\label{sec:headings}
+
+%\begin{table}[ht]
+%  \centering
+%  \fontfamily{ppl}\selectfont
+%  \begin{tabular}{ll}
+%    \toprule
+%    Margin & Length \\
+%    \midrule
+%    Paper width & \unit[8\nicefrac{1}{2}]{inches} \\
+%    Paper height & \unit[11]{inches} \\
+%    Textblock width & \unit[6\nicefrac{1}{2}]{inches} \\
+%    Textblock/sidenote gutter & \unit[\nicefrac{3}{8}]{inches} \\
+%    Sidenote width & \unit[2]{inches} \\
+%    \bottomrule
+%  \end{tabular}
+%  \caption{Here are the dimensions of the various margins used in the Tufte-handout class.}
+%  \label{tab:normaltab}
+%  %\zsavepos{pos:normaltab}
+%\end{table}
+\bibliography{bibliography}
+\bibliographystyle{plainnat}
+
+
+
+\end{document}
