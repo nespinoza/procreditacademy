@@ -1,0 +1,110 @@
+\documentclass{tufte-handout}
+
+%\geometry{showframe}% for debugging purposes -- displays the margins
+\usepackage{amsmath}
+\setcitestyle{authoryear,open={(},close={)}}
+% Set up the images/graphics package
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+
+\title{Activity 2: The Period-Luminosity Relation}
+\author[Dr. N\'estor Espinoza]{Dr. N\'estor Espinoza}
+\date{January, 2019}  % if the \date{} command is left out, the current date will be used
+
+% The following package makes prettier tables.  We're all about the bling!
+\usepackage{booktabs}
+
+% The units package provides nice, non-stacked fractions and better spacing
+% for units.
+\usepackage{units}
+
+% The fancyvrb package lets us customize the formatting of verbatim
+% environments.  We use a slightly smaller font.
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+% Small sections of multiple columns
+\usepackage{multicol}
+
+% Provides paragraphs of dummy text
+\usepackage{lipsum}
+
+% These commands are used to pretty-print LaTeX commands
+\newcommand{\doccmd}[1]{\texttt{\textbackslash#1}}% command name -- adds backslash automatically
+\newcommand{\docopt}[1]{\ensuremath{\langle}\textrm{\textit{#1}}\ensuremath{\rangle}}% optional command argument
+\newcommand{\docarg}[1]{\textrm{\textit{#1}}}% (required) command argument
+\newenvironment{docspec}{\begin{quote}\noindent}{\end{quote}}% command specification environment
+\newcommand{\docenv}[1]{\textsf{#1}}% environment name
+\newcommand{\docpkg}[1]{\texttt{#1}}% package name
+\newcommand{\doccls}[1]{\texttt{#1}}% document class name
+\newcommand{\docclsopt}[1]{\texttt{#1}}% document class option name
+
+
+\titlespacing*{\section}{0pt}{0.3\baselineskip}{\baselineskip}
+\begin{document}
+
+\noindent\textcolor{Red}{\rule{16cm}{3mm}}
+
+{\let\newpage\relax\maketitle}
+%\maketitle% this prints the handout title, author, and date
+
+\begin{abstract}
+\noindent\textcolor{Red}{\rule{10cm}{0.4mm}}
+\noindent In this activity, we will collaboratively measure the distance to the 
+galaxy M100 (NGC 4321) using known Cepheid variables that \textit{you} will have to find, 
+along with the period-luminosity relation described by Henrietta Lewit in 1912.
+
+\noindent\textcolor{Red}{\rule{10cm}{0.4mm}}
+\end{abstract}
+
+
+\section{Instructions}\label{sec:intro}
+\begin{fullwidth}
+Using your computer and/or your cellphone, go to the following website: \url{http://astro.wku.edu/labs/m100/thehunt.html} 
+(this website has been put up by Diane Dutkevitch and the The Northwestern University Astronomy Web Lab Series). With this 
+at hand, follow the following instructions:
+
+\begin{enumerate}
+\item Choose one of the grids in the webpage, and search for its Cepheid variable. Once you find it, write down the period of 
+the variable and its \textit{apparent magnitude}, $m_v$.
+\item Use the Leavitt's period-luminosity relation to find the \textit{absolute magnitude}, $M_V$, of the star. The relation is 
+$M_V = -[2.76(\log_{10}P - 1.0)] - 4.16$.
+\item Go and write in the whiteboard the distance modulus, $D = m_V-M_V$.
+\item Using the distance modulus from all of your classmates, compute the distance to M100 by using the formulae $d = 10^{0.2(\bar{D}+5-A_V)}$, where $A_V = 0.25$ and $\bar{D}$ is the average distance modulus obtained for all the Cepheids.
+\end{enumerate}
+
+\end{fullwidth}
+
+%\begin{enumerate}
+%\item Introduction (day 1).
+%\item Cosmology, pt. I (day 2).
+%\item Cosmology, pt. II (day 3).
+%\item Stellar formation and evolution (day 4).
+%\item Exoplanets (day 5).
+%\end{enumerate}
+%We describe each of these units below.
+%\end{fullwidth}
+%\subsection{Headings}\label{sec:headings}
+
+%\begin{table}[ht]
+%  \centering
+%  \fontfamily{ppl}\selectfont
+%  \begin{tabular}{ll}
+%    \toprule
+%    Margin & Length \\
+%    \midrule
+%    Paper width & \unit[8\nicefrac{1}{2}]{inches} \\
+%    Paper height & \unit[11]{inches} \\
+%    Textblock width & \unit[6\nicefrac{1}{2}]{inches} \\
+%    Textblock/sidenote gutter & \unit[\nicefrac{3}{8}]{inches} \\
+%    Sidenote width & \unit[2]{inches} \\
+%    \bottomrule
+%  \end{tabular}
+%  \caption{Here are the dimensions of the various margins used in the Tufte-handout class.}
+%  \label{tab:normaltab}
+%  %\zsavepos{pos:normaltab}
+%\end{table}
+
+
+\end{document}

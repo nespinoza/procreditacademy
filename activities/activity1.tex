@@ -1,0 +1,133 @@
+\documentclass{tufte-handout}
+
+%\geometry{showframe}% for debugging purposes -- displays the margins
+\usepackage{amsmath}
+\setcitestyle{authoryear,open={(},close={)}}
+% Set up the images/graphics package
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+
+\title{Activity 1: Temperatures and stellar spectra}
+\author[Dr. N\'estor Espinoza]{Dr. N\'estor Espinoza}
+\date{January, 2019}  % if the \date{} command is left out, the current date will be used
+
+% The following package makes prettier tables.  We're all about the bling!
+\usepackage{booktabs}
+
+% The units package provides nice, non-stacked fractions and better spacing
+% for units.
+\usepackage{units}
+
+% The fancyvrb package lets us customize the formatting of verbatim
+% environments.  We use a slightly smaller font.
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+% Small sections of multiple columns
+\usepackage{multicol}
+
+% Provides paragraphs of dummy text
+\usepackage{lipsum}
+
+% These commands are used to pretty-print LaTeX commands
+\newcommand{\doccmd}[1]{\texttt{\textbackslash#1}}% command name -- adds backslash automatically
+\newcommand{\docopt}[1]{\ensuremath{\langle}\textrm{\textit{#1}}\ensuremath{\rangle}}% optional command argument
+\newcommand{\docarg}[1]{\textrm{\textit{#1}}}% (required) command argument
+\newenvironment{docspec}{\begin{quote}\noindent}{\end{quote}}% command specification environment
+\newcommand{\docenv}[1]{\textsf{#1}}% environment name
+\newcommand{\docpkg}[1]{\texttt{#1}}% package name
+\newcommand{\doccls}[1]{\texttt{#1}}% document class name
+\newcommand{\docclsopt}[1]{\texttt{#1}}% document class option name
+
+
+\titlespacing*{\section}{0pt}{0.3\baselineskip}{\baselineskip}
+\begin{document}
+
+\noindent\textcolor{Red}{\rule{16cm}{3mm}}
+
+{\let\newpage\relax\maketitle}
+%\maketitle% this prints the handout title, author, and date
+
+\begin{abstract}
+\noindent\textcolor{Red}{\rule{10cm}{0.4mm}}
+\noindent In this first activity, we introduce the measurement of stellar 
+temperatures using Wein's displacement law and real, observed spectra taken 
+from the Sloan Digital Sky Survey (SDSS). The activity aims at solidifying the 
+understanding of what different wavelengths \textit{mean} in the electromagnetic 
+spectrum of light, and how these can be linked to obtain physical properties of stars.
+
+\noindent\textcolor{Red}{\rule{10cm}{0.4mm}}
+\end{abstract}
+
+
+\section{Instructions}\label{sec:intro}
+\begin{fullwidth}
+The data we show in Figures \ref{fig:spectra} and \ref{fig:stars} is taken from the Sloan Digital Sky Survey (SDSS) 
+SkyServer\footnote{\url{http://skyserver.sdss.org}}. This is a server which hosts up-to-date data taken mainly from the 
+2.5m SDSS Telescope in Apache Point, New Mexico. On the one hand, Figure \ref{fig:spectra} shows \textit{spectra} of real 
+stars (that is, the ammount of light from stars at different wavelengths), whereas Figure \ref{fig:stars} shows the actual 
+images of the stars as observed by the telescope; however, which star corresponds to which spectra is unkown. This will be 
+one of the things \textit{you} will have to figure out!
+
+Activities:
+
+\begin{enumerate}
+\item Using Wein's displacement law ($\lambda_{\textnormal{max}}T = b$, where $b=2.89777\times 10^{-3}$ $m$ $K$, where $m$ is 
+meters and $K$ is kelvins), calculate the temperature of each of the stars using the spectra in Figure \ref{fig:stars}. Compare 
+them to the temperature of the (surface of the) Sun ($T = 5,778$ K) --- which are hotter than the Sun and which are cooler?
+\item By looking at their spectra, try to match the spectra in Figure \ref{fig:spectra} to the stars in Figure \ref{fig:stars}. Can you relate color to temperature? How?
+\end{enumerate}
+
+\begin{figure}
+  \includegraphics[width=1.5\columnwidth]{figures_activity1/spectra1.pdf}
+%  \checkparity This is an \pageparity\ page.%
+  \caption{Set of real stellar spectra for the activity. Data taken from the SDSS.}
+  \label{fig:spectra}
+  %\zsavepos{pos:textfig}
+  \setfloatalignment{b}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=1.5\columnwidth]{figures_activity1/stars1.pdf}
+%  \checkparity This is an \pageparity\ page.%
+  \caption{Set of stars for which the spectra in Figure \ref{fig:spectra} was taken. Data also taken from the SDSS.}
+  \label{fig:stars}
+  %\zsavepos{pos:textfig}
+  \setfloatalignment{b}
+\end{figure}
+
+\end{fullwidth}
+
+%\begin{enumerate}
+%\item Introduction (day 1).
+%\item Cosmology, pt. I (day 2).
+%\item Cosmology, pt. II (day 3).
+%\item Stellar formation and evolution (day 4).
+%\item Exoplanets (day 5).
+%\end{enumerate}
+%We describe each of these units below.
+%\end{fullwidth}
+%\subsection{Headings}\label{sec:headings}
+
+%\begin{table}[ht]
+%  \centering
+%  \fontfamily{ppl}\selectfont
+%  \begin{tabular}{ll}
+%    \toprule
+%    Margin & Length \\
+%    \midrule
+%    Paper width & \unit[8\nicefrac{1}{2}]{inches} \\
+%    Paper height & \unit[11]{inches} \\
+%    Textblock width & \unit[6\nicefrac{1}{2}]{inches} \\
+%    Textblock/sidenote gutter & \unit[\nicefrac{3}{8}]{inches} \\
+%    Sidenote width & \unit[2]{inches} \\
+%    \bottomrule
+%  \end{tabular}
+%  \caption{Here are the dimensions of the various margins used in the Tufte-handout class.}
+%  \label{tab:normaltab}
+%  %\zsavepos{pos:normaltab}
+%\end{table}
+
+
+\end{document}
